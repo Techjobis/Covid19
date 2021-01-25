@@ -1,6 +1,8 @@
 import React from 'react'
-import { TouchableOpacity, Text, Dimensions, StyleSheet, View } from 'react-native'
-import Icon from 'react-native-vector-icons/Feather'
+import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'
+
+// importing components
+import Svg from '../svgs/index';
 
 // importing constants
 import Layout from '../../Layout'
@@ -17,7 +19,7 @@ const DrawerItem = ({ label, onPress, icon, style }: DrawerItemProps) => {
   return (
     <TouchableOpacity style={styles.drawerItemContainer} onPress={onPress}>
       <View style={styles.innerDrawerItemContainer}>
-        <Icon name={icon} size={18 * scale} color="black" style={styles.drawerIconStyle} />
+        <Svg name={icon} size={18 * scale} color="black" style={styles.drawerIconStyle} />
         <Text style={styles.drawerTextStyle}>{label}</Text>
       </View>
     </TouchableOpacity>

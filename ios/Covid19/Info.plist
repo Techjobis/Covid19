@@ -53,7 +53,6 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Feather.ttf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Covid19 requires to access your location to fetch stats</string>

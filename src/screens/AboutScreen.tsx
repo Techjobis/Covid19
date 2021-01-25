@@ -8,7 +8,9 @@ import {
   Text,
   ScrollView
 } from 'react-native'
-import Icon from 'react-native-vector-icons/Feather'
+
+// importing components
+import Svg from '../components/svgs/index';
 
 // importing common style
 import Styles from '../Styles'
@@ -107,7 +109,7 @@ const AboutScreen = ({ style }: AboutProps) => {
                 'https://github.com/sarthakpranesh/Covid19-ReactNative'
               )
             }>
-            <Icon style={{ marginVertical: 10 }} name="github" color="black" size={24 * scale} />
+            <Svg style={{ marginVertical: 10 }} name="github" color="black" size={24 * scale} />
           </TouchableOpacity>
           <Text
             style={{

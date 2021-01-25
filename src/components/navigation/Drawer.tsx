@@ -4,7 +4,6 @@ import { View, StyleSheet, TouchableOpacity, Dimensions } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { DrawerContentScrollView } from '@react-navigation/drawer'
 import Animated from 'react-native-reanimated'
-import Icon from 'react-native-vector-icons/Feather'
 
 // importing Screens
 import HomeScreen from '../../screens/HomeScreen'
@@ -15,6 +14,7 @@ import TopHeadlinesScreen from '../../screens/TopHeadlinesScreen'
 
 // Importing drawer components
 import DrawerItem from './DrawerItem'
+import Svg from '../svgs/index';
 
 // importing constants
 import Layout from '../../Layout'
@@ -49,7 +49,7 @@ export const Screens = ({ navigation, style, country }: ScreensProps) => {
               // eslint-disable-next-line react/prop-types
               onPress={() => navigation.openDrawer()}
             >
-              <Icon name="menu" size={18 * scale} color="black" />
+              <Svg name="menu" size={18 * scale} color="black" />
             </TouchableOpacity>
           )
         }}>
@@ -99,19 +99,19 @@ export const DrawerContent = (props: any) => {
         <DrawerItem
           label="Headline"
           onPress={() => props.navigation.navigate('Headline')}
-          icon="columns"
+          icon="column"
         />
         <DrawerItem
           label="Precaution"
           onPress={() => props.navigation.navigate('Precaution')}
-          icon="alert-octagon"
+          icon="alert"
         />
         {
           country === "India" ? (
             <DrawerItem
               label="Help"
               onPress={() => props.navigation.navigate('Help')}
-              icon="help-circle"
+              icon="help"
             />
           ) : null
         }
